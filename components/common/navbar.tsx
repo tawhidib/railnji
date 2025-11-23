@@ -25,7 +25,7 @@ export default function Navbar() {
 	];
 	const pathname = usePathname();
 	return (
-		<nav className="pb-5 pt-10 main-container flex items-center justify-between">
+		<nav className="pb-5 pt-10 main-container flex items-center justify-between fixed top-0 left-0 right-0 z-50">
 			<Link className="text-[1.375rem]" href="/">
 				INJI SO
 			</Link>

@@ -1,6 +1,6 @@
 import Navbar from "@/components/common/navbar";
 import type { Metadata } from "next";
-import { DM_Sans, Syne } from "next/font/google";
+import { DM_Sans, Poppins, Syne } from "next/font/google";
 import "./globals.css";
 
 const syne = Syne({
@@ -12,6 +12,12 @@ const syne = Syne({
 const dmSans = DM_Sans({
 	subsets: ["latin"],
 	variable: "--font-dm-sans",
+	weight: ["400", "500", "600", "700", "800"],
+});
+
+const poppins = Poppins({
+	subsets: ["latin"],
+	variable: "--font-poppins",
 	weight: ["400", "500", "600", "700", "800"],
 });
 
@@ -28,7 +34,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`antialiased ${syne.className} ${dmSans.className}`}
+				className={`antialiased ${syne.className} ${dmSans.className} ${poppins.className}`}
 				suppressHydrationWarning={true}
 			>
 				<Navbar />

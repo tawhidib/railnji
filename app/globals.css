@@ -42,6 +42,7 @@
 @theme inline {
 	--font-syne: "Syne", sans-serif;
 	--font-dm-sans: "DM Sans", sans-serif;
+	--font-poppins: "Poppins", sans-serif;
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
 	--color-text: #000000;
@@ -128,11 +129,61 @@
 	body {
 		@apply bg-background text-text font-dm-sans;
 	}
-
 	.main-container {
-		@apply mx-auto px-5 xl:px-0 max-w-360;
+		@apply mx-auto px-4 xl:px-0 max-w-340;
 	}
 	.container {
-		@apply mx-auto px-4 xl:px-0 max-w-303;
+		@apply mx-auto px-4 xl:px-0 max-w-340;
 	}
+	.col {
+		@apply flex flex-col;
+	}
+	.row {
+		@apply flex flex-row;
+	}
+	.flex-center {
+		@apply flex items-center justify-center;
+	}
+	.flex-between {
+		@apply flex items-center justify-between;
+	}
+	.col-center {
+		@apply flex flex-col items-center justify-center;
+	}
+}
+
+.hero-link {
+	background: linear-gradient(
+		86.16deg,
+		rgba(255, 255, 255, 0.2) 11.14%,
+		rgba(255, 255, 255, 0.035) 113.29%
+	);
+	border: 3px solid;
+	border-image-source: linear-gradient(
+		155.31deg,
+		rgba(255, 255, 255, 0.5) 12.33%,
+		rgba(255, 255, 255, 0) 34.31%,
+		rgba(255, 255, 255, 0) 52.66%,
+		rgba(255, 255, 255, 0.54) 74.67%
+	);
+	backdrop-filter: blur(70px);
+	box-shadow: 0px 1.2px 29.92px 0px #452a7c1a;
+	box-shadow: 10px 10px 29px 0px #ffffff40 inset;
+}
+
+.hero-link:hover {
+	background: linear-gradient(
+		95.67deg,
+		rgba(0, 0, 0, 0.8) 10.51%,
+		rgba(0, 0, 0, 0.056) 111.31%
+	);
+	border-image-source: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+	);
+	backdrop-filter: blur(70px);
+	box-shadow: 0px 1.2px 29.92px 0px #0000001a;
+	box-shadow: 10px 10px 29px 0px #00000040 inset;
+	color: #ffffff;
 }
