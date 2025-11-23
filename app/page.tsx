@@ -1,4 +1,5 @@
 import LandingHeroArea from "@/components/pages/home/hero";
+import ProjectSection from "@/components/pages/home/project-section";
 import SectionOne from "@/components/pages/home/section-one";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
 		<>
 			<LandingHeroArea />
 			<SectionOne />
+			<ProjectSection />
 		</>
 	);
 }
