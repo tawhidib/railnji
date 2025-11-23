@@ -20,7 +20,7 @@ export default function LandingHeroArea() {
 		},
 	];
 	return (
-		<header className='bg-[url("/assets/images/landing-header-bg.png")] bg-cover min-h-screen'>
+		<header className='bg-[url("/assets/images/landing-header-bg.png")] bg-cover h-267'>
 			<div className="col container pt-58 items-center">
 				<h1 className="text-center font-bold font-syne leading-[0.9] text-black uppercase text-[5rem]">
 					HELLO, I&apos;AM INJI
