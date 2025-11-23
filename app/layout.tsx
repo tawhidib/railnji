@@ -1,3 +1,4 @@
+import Footer from "@/components/common/footer";
 import Navbar from "@/components/common/navbar";
 import type { Metadata } from "next";
 import { DM_Sans, Poppins, Syne } from "next/font/google";
@@ -39,6 +40,7 @@ export default function RootLayout({
 			>
 				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);

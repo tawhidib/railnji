@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function LandingHeroArea() {
@@ -20,7 +21,15 @@ export default function LandingHeroArea() {
 		},
 	];
 	return (
-		<header className='bg-[url("/assets/images/landing-header-bg.png")] bg-cover h-267'>
+		<header className="bg-cover h-267 relative">
+			<Image
+				src="/assets/images/landing-header-bg.png"
+				alt=""
+				width={2094}
+				height={1577.580078125}
+				className="absolute inset-0 -z-10"
+			/>
+
 			<div className="col container pt-58 items-center">
 				<h1 className="text-center font-bold font-syne leading-[0.9] text-black uppercase text-[5rem]">
 					HELLO, I&apos;AM INJI
