@@ -21,7 +21,7 @@ const AboutPageIndex = () => {
 			</header>
 
 			<div className="container">
-				<div className="mx-auto w-full max-w-[1117px] pt-60">
+				<div className="mx-auto w-full max-w-[1117px] pt-45">
 					<Title title="WORK EXPERIENCE" />
 					<div className="bg-[#D9D9D9] rounded-[15px] h-102.5" />
 					<div className="px-10.5 pt-10.5 col">
@@ -67,7 +67,7 @@ const AboutPageIndex = () => {
 										{item.description}
 									</p>
 
-									<div className="mt-3 h-[1px] w-full bg-black/25" />
+									<div className="mt-3 h-px w-full bg-black/25" />
 								</div>
 							</div>
 						))}
