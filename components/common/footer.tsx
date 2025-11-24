@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<div className="container pt-6 pb-12 border-t border-t-black">
+		<div className="container pt-6 pb-12 border-t border-t-black relative">
 			<div className="flex-between">
 				<div className="col gap-10">
 					<Link
@@ -44,6 +45,14 @@ export default function Footer() {
 					/>
 				</div>
 			</div>
+
+			<Image
+				src="/assets/images/footer-bg.png"
+				alt=""
+				width={1346.9847227253188}
+				height={1318.6302309269474}
+				className="bottom-0 left-[-529px] rotate-[-78.91 deg] absolute -z-1"
+			/>
 		</div>
 	);
 }

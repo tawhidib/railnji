@@ -2,6 +2,8 @@ import Footer from "@/components/common/footer";
 import Navbar from "@/components/common/navbar";
 import type { Metadata } from "next";
 import { DM_Sans, Poppins, Syne } from "next/font/google";
+import "swiper/css";
+import "swiper/css/pagination";
 import "./globals.css";
 
 const syne = Syne({
