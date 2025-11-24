@@ -50,8 +50,8 @@ export default function Footer() {
 			<Image
 				src="/assets/images/footer-bg.png"
 				alt=""
-				width={1346.9847227253188}
-				height={1318.6302309269474}
+				width={1346.98}
+				height={1318.63}
 				className="bottom-0 left-[-529px] rotate-[-78.91 deg] absolute -z-1"
 			/>
 		</footer>
