@@ -25,7 +25,7 @@ export default function Footer() {
 						alt=""
 						width={1422.5404108892799}
 						height={1392.595464482002}
-						className="bottom-0 absolute -z-1"
+						className="bottom-0 right-0 absolute -z-1"
 					/>
 				);
 			case "/skills":
@@ -35,7 +35,7 @@ export default function Footer() {
 						alt=""
 						width={1100.05}
 						height={1076.9}
-						className="bottom-0 absolute -z-1"
+						className="bottom-0 left-0 absolute -z-1"
 					/>
 				);
 			default:
