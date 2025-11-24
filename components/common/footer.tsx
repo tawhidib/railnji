@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<div className="container pt-6 pb-12 border-t border-t-black relative">
-			<div className="flex-between">
+		<footer className="container pt-6 pb-12 border-t border-t-black relative">
+			<div className="flex-between flex-col items-start md:items-center md:flex-row gap-y-10">
 				<div className="col gap-10">
 					<Link
 						href="/"
@@ -12,12 +12,13 @@ export default function Footer() {
 					>
 						INJI SO
 					</Link>
-					<p className="mt-px text-black/70 leading-[1.32] text-[1.375rem]">
-						Producer & director who stays up late <br /> to create stories
-						worth staying up late for
+					<p className="mt-px text-black/70 leading-[1.32] text-lg md:text-[1.375rem]">
+						Producer & director who stays up late{" "}
+						<br className="hidden lg:block" /> to create stories worth
+						staying up late for
 					</p>
 				</div>
-				<div className="flex gap-10">
+				<div className="flex gap-10 flex-col sm:flex-row items-start">
 					<Links
 						title="more information"
 						links={[
@@ -53,7 +54,7 @@ export default function Footer() {
 				height={1318.6302309269474}
 				className="bottom-0 left-[-529px] rotate-[-78.91 deg] absolute -z-1"
 			/>
-		</div>
+		</footer>
 	);
 }
 
@@ -66,13 +67,13 @@ const Links = ({
 }) => {
 	return (
 		<div className="col gap-6">
-			<h5 className="font-semibold text-xl leading-[0.9] text-black capitalize">
+			<h5 className="font-semibold md:text-xl text-lg leading-[0.9] text-black capitalize">
 				{title}
 			</h5>
 			<div className="col gap-5">
 				{links.map(({ label, href }) => (
 					<Link
-						className="leading-[0.9] text-xl text-black/70"
+						className="leading-[0.9] md:text-xl text-lg text-black/70"
 						key={label}
 						href={href}
 					>
