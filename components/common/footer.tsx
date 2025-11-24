@@ -18,6 +18,16 @@ export default function Footer() {
 						className="bottom-0 left-0 absolute -z-1"
 					/>
 				);
+			case "/about":
+				return (
+					<Image
+						src="/assets/images/footer-bg-about.png"
+						alt=""
+						width={1422.5404108892799}
+						height={1392.595464482002}
+						className="bottom-0 absolute -z-1"
+					/>
+				);
 			case "/skills":
 				return (
 					<Image
