@@ -39,7 +39,7 @@ export default function LandingHeroArea() {
 					<br /> stories worth staying up late for
 				</p>
 
-				<div className="flex items-center gap-10 justify-center">
+				<div className="flex flex-col sm:flex-row items-center gap-10 justify-center">
 					{navLinks.map((link) => (
 						<Link
 							key={link.name}

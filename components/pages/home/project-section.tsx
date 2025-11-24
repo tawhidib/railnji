@@ -1,7 +1,6 @@
 import ImageView from "@/components/common/image-view";
 import SectionNumberTitle from "@/components/common/section-number-title";
 import SectionTopArea from "@/components/common/section-top-area";
-import Image from "next/image";
 
 export default function ProjectSection() {
 	return (
@@ -34,13 +33,13 @@ export default function ProjectSection() {
 				/>
 				<ImageView className="w-full aspect-1200/594 bg-[url('/assets/images/3d-art.png')] mb-5" />
 			</div>
-			<Image
+			{/* <Image
 				src="/assets/images/section-2-bg.png"
 				alt=""
 				width={1773.9543286995913}
 				height={1736.612043901271}
 				className="absolute top-0 left-[258px] -z-1"
-			/>
+			/> */}
 		</div>
 	);
 }
