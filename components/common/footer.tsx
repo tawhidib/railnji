@@ -73,7 +73,7 @@ const Links = ({
 			<div className="col gap-5">
 				{links.map(({ label, href }) => (
 					<Link
-						className="leading-[0.9] md:text-xl text-lg text-black/70"
+						className="leading-[0.9] md:text-xl text-lg text-black/70 w-fit"
 						key={label}
 						href={href}
 					>
