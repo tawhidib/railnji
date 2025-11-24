@@ -9,6 +9,85 @@ const SkillsPageIndex = () => {
 		{ icon: <Calender />, title: "Production Management" },
 		{ icon: <PlayCircle />, title: "Video Editing" },
 	];
+
+	const tools = [
+		{
+			title: "Advance",
+			skills: [
+				{
+					src: "/assets/images/avid.png",
+					title: "Avid",
+				},
+				{
+					src: "/assets/images/adobe-pp.png",
+					title: "Adobe Premiere Pro",
+				},
+				{
+					src: "/assets/images/movie-magic.png",
+					title: "Movie Magic Scheduling",
+				},
+			],
+		},
+		{
+			title: "Proficient",
+			skills: [
+				{
+					src: "/assets/images/adobe-ps.png",
+					title: "Adobe Photoshop",
+				},
+				{
+					src: "/assets/images/canva.png",
+					title: "Canva",
+				},
+			],
+		},
+		{
+			title: "Familiar",
+			skills: [
+				{
+					src: "/assets/images/maya.png",
+					title: "Maya",
+				},
+				{
+					src: "/assets/images/zbrush.png",
+					title: "Zbrush",
+				},
+				{
+					src: "/assets/images/v-ray.png",
+					title: "V-Ray",
+				},
+			],
+		},
+	];
+	const languages = [
+		{
+			title: "Native",
+			skills: [
+				{
+					src: "/assets/images/korean.png",
+					title: "Korean",
+				},
+			],
+		},
+		{
+			title: "Proficient",
+			skills: [
+				{
+					src: "/assets/images/english.png",
+					title: "English",
+				},
+			],
+		},
+		{
+			title: "Familiar",
+			skills: [
+				{
+					src: "/assets/images/chinese.png",
+					title: "Chinese",
+				},
+			],
+		},
+	];
 	return (
 		<>
 			<header className="bg-[url('/assets/images/skills-header-bg.png')] bg-center bg-cover relative flex-center">
@@ -66,8 +145,99 @@ const SkillsPageIndex = () => {
 					className="pointer-events-none absolute h-[318px] top-full w-full left-0 -translate-y-1/2"
 				/>
 			</header>
+			<div className="py-30">
+				<div className="container col gap-30">
+					<div className="flex flex-col gap-14">
+						<Title title="TOOLS" />
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+							{tools?.map((item) => (
+								<div
+									key={item.title}
+									className="col items-start gap-14"
+								>
+									<ItemTitle title={item.title} />
+									<div className="col items-start gap-6">
+										{item.skills?.map((skill) => (
+											<div
+												key={skill.title}
+												className="flex items-center gap-5"
+											>
+												<span className="size-20 flex-center">
+													<Image
+														width={80}
+														height={80}
+														src={skill.src}
+														alt=""
+														className="object-cover"
+													/>
+												</span>
+												<ItemName title={skill.title} />
+											</div>
+										))}
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+					<div className="flex flex-col gap-14">
+						<Title title="Language" />
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+							{languages?.map((item) => (
+								<div
+									key={item.title}
+									className="col items-start gap-14"
+								>
+									<ItemTitle title={item.title} />
+									<div className="col items-start gap-6">
+										{item.skills?.map((skill) => (
+											<div
+												key={skill.title}
+												className="flex items-center gap-5"
+											>
+												<span className="w-15 h-10 flex-center">
+													<Image
+														width={60}
+														height={40.15}
+														src={skill.src}
+														alt=""
+														className="object-cover"
+													/>
+												</span>
+												<ItemName title={skill.title} />
+											</div>
+										))}
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+			</div>
 		</>
 	);
 };
 
 export default SkillsPageIndex;
+
+const Title = ({ title }: { title: string }) => {
+	return (
+		<h3 className="font-medium text-[2.5rem] leading-[1.4] text-center text-black">
+			{title}
+		</h3>
+	);
+};
+
+const ItemTitle = ({ title }: { title: string }) => {
+	return (
+		<h4 className="w-full font-medium text-2xl text-center text-black leading-[0.9]">
+			{title}
+		</h4>
+	);
+};
+const ItemName = ({ title }: { title: string }) => {
+	return (
+		<h5 className="font-medium text-[1.375rem] text-center text-black leading-[0.9]">
+			{title}
+		</h5>
+	);
+};
