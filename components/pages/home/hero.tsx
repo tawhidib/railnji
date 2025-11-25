@@ -21,7 +21,7 @@ export default function LandingHeroArea() {
 		},
 	];
 	return (
-		<header className="bg-cover min-h-[90vh] md:min-h-267 relative">
+		<header className="bg-cover min-h-[70vh] md:min-h-267 relative">
 			<Image
 				src="/assets/images/landing-header-bg.png"
 				alt=""

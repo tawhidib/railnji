@@ -4,9 +4,9 @@ import SliderAuto from "@/components/common/slider-auto";
 
 export default function NewsWritingsSection() {
 	return (
-		<div className="pt-30 pb-54.5 container">
+		<div className="md:pt-30 md:pb-54.5 container">
 			<SectionNumberTitle number="03/" title="news & writings" />
-			<div className="py-15.5 max-w-[1200px] mx-auto">
+			<div className="py-6 max-md:mb-6 md:py-15.5 max-w-[1200px] mx-auto">
 				<SliderAuto
 					slidesPerView={"auto"}
 					data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
