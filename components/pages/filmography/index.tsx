@@ -4,9 +4,9 @@ import { PageSubtitle, PageTitle } from "@/components/common/page-title";
 import SliderAuto from "@/components/common/slider-auto";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useState } from "react";
 
 const FilmographyPageIndex = () => {
-	const container = "col gap-3.5 w-full";
 	const title = "text-sm md:text-2xl leading-[0.9] text-black font-medium";
 	const img = "object-cover h-full rounded-xl w-full aspect-580/416";
 	const breakpoints = {
@@ -74,7 +74,7 @@ const FilmographyPageIndex = () => {
 								]}
 								breakpoints={breakpoints}
 								renderItem={(item) => (
-									<div key={item.src} className={cn(container)}>
+									<Item key={item.src}>
 										<Image
 											width={580}
 											height={416}
@@ -83,7 +83,7 @@ const FilmographyPageIndex = () => {
 											className={cn(img)}
 										/>
 										<p className={cn(title)}>{item.title}</p>
-									</div>
+									</Item>
 								)}
 								containerClassName=""
 							/>
@@ -112,7 +112,7 @@ const FilmographyPageIndex = () => {
 								]}
 								breakpoints={breakpoints}
 								renderItem={(item) => (
-									<div key={item.src} className={cn(container)}>
+									<Item key={item.src}>
 										<Image
 											width={580}
 											height={416}
@@ -121,7 +121,7 @@ const FilmographyPageIndex = () => {
 											className={cn(img)}
 										/>
 										<p className={cn(title)}>{item.title}</p>
-									</div>
+									</Item>
 								)}
 								containerClassName=""
 							/>
@@ -150,7 +150,7 @@ const FilmographyPageIndex = () => {
 								]}
 								breakpoints={breakpoints}
 								renderItem={(item) => (
-									<div key={item.src} className={cn(container)}>
+									<Item key={item.src}>
 										<Image
 											width={580}
 											height={416}
@@ -159,7 +159,7 @@ const FilmographyPageIndex = () => {
 											className={cn(img)}
 										/>
 										<p className={cn(title)}>{item.title}</p>
-									</div>
+									</Item>
 								)}
 								containerClassName=""
 							/>
@@ -184,10 +184,10 @@ const FilmographyPageIndex = () => {
 									},
 								]}
 								renderItem={(item) => (
-									<div key={item.title} className={cn(container)}>
+									<Item key={item.title}>
 										<div className="bg-[#C4C4C4] rounded-xl w-full aspect-580/416" />
 										<p className={cn(title)}>{item.title}</p>
-									</div>
+									</Item>
 								)}
 								breakpoints={breakpoints}
 							/>
@@ -213,5 +213,65 @@ const Title = ({ text }: { text: string }) => {
 		<h3 className="text-xl md:text-5xl leading-[0.9] uppercase text-black">
 			{text}
 		</h3>
+	);
+};
+
+const Item = ({ children }: { children: React.ReactNode }) => {
+	const [hover, setHover] = useState(false);
+
+	if (hover) {
+		return (
+			<div
+				onMouseLeave={() => {
+					setHover(false);
+				}}
+			>
+				<div className="flex items-stretch w-full aspect-580/416 rounded-xl overflow-hidden">
+					<div className="w-2/5">
+						<Image
+							width={243}
+							height={363}
+							src={"/assets/images/hover.jpg"}
+							alt=""
+							className={"h-full w-full"}
+						/>
+					</div>
+					<div className="w-3/5 bg-[#838383] py-5 md:py-11.25 px-5">
+						<h4 className="font-medium text-base md:text-xl leading-normal text-white mb-3">
+							Where is My Home | 구해줘! 홈즈
+						</h4>
+						<div className="flex-between mb-6">
+							<p className="text-white text-sm md:text-lg font-medium">
+								Producer/Director
+							</p>
+							<p className="text-white text-sm md:text-lg font-medium">
+								2025
+							</p>
+						</div>
+						<div className="col">
+							<p className="text-sm md:text-base text-white">
+								Stars hit the streets to find the perfect <br /> home
+								for their clients. <br /> Selling Sunset of Korea.{" "}
+								<br /> On-location and studio shooting, Variety show{" "}
+								<br /> Highest viewership ratings: 7.5%
+							</p>
+						</div>
+						<div className="flex justify-end mt-auto">
+							<p className="text-xs underline text-white mt-10">
+								Learn More
+							</p>
+						</div>
+					</div>
+				</div>
+				<p className="text-sm md:text-2xl leading-[0.9] text-black font-medium mt-3">
+					Learn More
+				</p>
+			</div>
+		);
+	}
+	return (
+		<div onMouseEnter={() => setHover(true)} className="col gap-3.5 w-full">
+			{children}
+		</div>
 	);
 };
