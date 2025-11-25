@@ -39,30 +39,30 @@ export default function Navbar() {
 	return (
 		<div
 			className={cn(
-				"pb-5 pt-10 w-full fixed top-0 left-0 right-0 z-50 transition duration-200",
+				"w-full fixed top-0 left-0 right-0 z-50 transition duration-200",
 				{
 					"bg-white": scrolled,
 				}
 			)}
 		>
-			<nav
-				className={cn("main-container flex items-center justify-between")}
-			>
-				<Link className="text-[1.375rem]" href="/">
-					INJI SO
-				</Link>
-				<div className="flex items-center gap-10">
-					{navMenus.map((menu) => (
-						<Link
-							key={menu.name}
-							href={menu.href}
-							className={cn("text-xl", {
-								"font-semibold": pathname === menu.href,
-							})}
-						>
-							{menu.name}
-						</Link>
-					))}
+			<nav className={cn("pb-5 pt-10 main-container border-b border-black")}>
+				<div className="flex items-center justify-between">
+					<Link className="text-[1.375rem]" href="/">
+						INJI SO
+					</Link>
+					<div className="flex items-center gap-10">
+						{navMenus.map((menu) => (
+							<Link
+								key={menu.name}
+								href={menu.href}
+								className={cn("text-xl", {
+									"font-semibold": pathname === menu.href,
+								})}
+							>
+								{menu.name}
+							</Link>
+						))}
+					</div>
 				</div>
 			</nav>
 		</div>
