@@ -129,12 +129,6 @@
 	body {
 		@apply bg-background text-text font-dm-sans;
 	}
-	.main-container {
-		@apply mx-auto px-4 xl:px-0 max-w-340;
-	}
-	.container {
-		@apply mx-auto px-4 xl:px-0 max-w-303;
-	}
 	.col {
 		@apply flex flex-col;
 	}
@@ -149,6 +143,15 @@
 	}
 	.col-center {
 		@apply flex flex-col items-center justify-center;
+	}
+}
+
+@layer layout {
+	.main-container {
+		@apply mx-auto px-4 xl:px-0 max-w-340;
+	}
+	.container {
+		@apply mx-auto px-4 xl:px-0 max-w-303;
 	}
 }
 

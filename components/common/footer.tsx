@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 
 export default function Footer() {
 	const pathname = usePathname();
-	console.log({ pathname });
 	const getBg = () => {
 		switch (pathname) {
 			case "/":
@@ -44,7 +43,7 @@ export default function Footer() {
 	};
 	return (
 		<footer className="relative">
-			<div className="container border-t border-t-black pt-6 pb-12">
+			<div className="mx-auto px-4 xl:px-0 max-w-336 border-t border-t-black pt-6 pb-12">
 				<div className="flex-between flex-col items-start md:items-center md:flex-row gap-y-10">
 					<div className="col gap-10">
 						<Link
