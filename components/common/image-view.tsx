@@ -13,9 +13,9 @@ export default function ImageView({ className, title }: ImageViewProps) {
 				className
 			)}
 		>
-			<div className="absolute inset-0 linear-shad col justify-end p-10">
+			<div className="absolute inset-0 linear-shad col justify-end p-6 md:p-10">
 				{title ? (
-					<h3 className="font-syne text-bold text-5xl text-white leading-none tracking-[-3%] font-bold">
+					<h3 className="font-syne text-bold text-2xl md:text-3xl lg:text-5xl text-white leading-none tracking-[-3%] font-bold">
 						{title}
 					</h3>
 				) : null}

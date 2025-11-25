@@ -4,11 +4,11 @@ import SectionTopArea from "@/components/common/section-top-area";
 
 export default function ProjectSection() {
 	return (
-		<div className="col gap-20.5 container py-30 relative">
+		<div className="col gap-10  md:gap-20.5 container py-30 relative">
 			<SectionNumberTitle number="02/" title="projects" />
 			<div>
 				<SectionTopArea
-					text="filmography"
+					text="Filmography"
 					href="/filmography"
 					className="mb-8"
 				/>
