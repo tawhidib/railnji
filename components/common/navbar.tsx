@@ -41,11 +41,20 @@ export default function Navbar() {
 			className={cn(
 				"w-full fixed top-0 left-0 right-0 z-50 transition duration-200",
 				{
-					"bg-white": scrolled,
+					"bg-white ": scrolled,
 				}
 			)}
 		>
-			<nav className={cn("pb-5 pt-10 main-container border-b border-black")}>
+			<nav
+				className={cn(
+					"pb-5 pt-10 main-container border-b border-black",
+					pathname === "/filmography" && "text-white border-white",
+					pathname === "/about" && "text-white border-white",
+					{
+						" text-black border-black": scrolled,
+					}
+				)}
+			>
 				<div className="flex items-center justify-between">
 					<Link className="text-[1.375rem]" href="/">
 						INJI SO
