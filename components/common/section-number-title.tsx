@@ -12,7 +12,7 @@ export default function SectionNumberTitle({
 	return (
 		<div
 			className={cn(
-				"col font-medium text-lg leading-none -tracking-[3%] uppercase text-black",
+				"col font-medium text-sm sm:text-lg leading-none -tracking-[3%] uppercase text-black",
 				className
 			)}
 		>
