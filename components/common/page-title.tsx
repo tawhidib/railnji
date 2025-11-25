@@ -11,7 +11,7 @@ export const PageTitle = ({
 	return (
 		<h1
 			className={cn(
-				"text-[10.625rem] text-white leading-[0.9] uppercase",
+				"text-5xl sm:text-7xl lg:text-[10.625rem] text-white leading-[0.9] uppercase",
 				className
 			)}
 		>
@@ -30,7 +30,7 @@ export const PageSubtitle = ({
 	return (
 		<h1
 			className={cn(
-				"text-2xl text-white leading-[1.4] font-dm-sans",
+				"text-base md:text-2xl text-white leading-[1.4] font-dm-sans",
 				className
 			)}
 		>

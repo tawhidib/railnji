@@ -36,15 +36,15 @@ const AboutPageIndex = () => {
 					height={318}
 					src="/assets/images/rectangle.png"
 					alt=""
-					className="pointer-events-none absolute h-[318px] top-full w-full left-0 -translate-y-1/3"
+					className="pointer-events-none absolute h-[200px] top-full w-full left-0 -translate-y-1/3"
 				/>
 			</header>
 
 			<div className="container">
-				<div className="mx-auto w-full max-w-[1117px] pt-45">
+				<div className="mx-auto w-full max-w-[1117px] pt-27 md:pt-35">
 					<Title title="WORK EXPERIENCE" />
 					<div className="bg-[#D9D9D9] rounded-[15px] h-102.5" />
-					<div className="px-10.5 pt-10.5 col">
+					<div className="md:px-10.5 pt-10.5 col">
 						{timelineData.map((item) => (
 							<div
 								key={item.year}
@@ -52,26 +52,26 @@ const AboutPageIndex = () => {
 							>
 								{/* Year */}
 								<div className="flex-between w-23.25">
-									<h4 className="font-medium text-2xl leading-[0.9] text-black">
+									<h4 className="font-medium text-base md:text-2xl leading-[0.9] text-black">
 										{item.year}
 									</h4>
 
 									{/* Dot */}
-									<span className="bg-[#202020] size-3.5 rounded-full" />
+									<span className="bg-[#202020] size-2 md:size-3.5 rounded-full" />
 								</div>
 
 								<span
 									className="w-px border border-solid border-image-source:linear-gradient(270deg,#202020_0%,rgba(134,134,134,0.12)_100%)] 
-[border-image-slice:1] self-stretch -ms-2 -z-1"
+[border-image-slice:1] self-stretch -ms-1.25 md:-ms-2 -z-1"
 								/>
 
 								{/* Content */}
-								<div className="w-full col pb-9.5 ps-8">
-									<h3 className="font-medium text-[1.375rem] leading-[0.9] text-black">
+								<div className="w-full col pb-9.5 ps-4 md:ps-8">
+									<h3 className="font-medium text-lg md:text-[1.375rem] leading-[0.9] text-black">
 										{item.title}
 									</h3>
 
-									<p className="text-2xl leading-[0.9] mt-6">
+									<p className="text-base md:text-2xl leading-[0.9] mt-6">
 										{item.description}
 									</p>
 
@@ -82,7 +82,7 @@ const AboutPageIndex = () => {
 					</div>
 				</div>
 			</div>
-			<div className="container py-40">
+			<div className="container py-20 md:py-40">
 				<Title title="INTERESTS" />
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 					{[
@@ -97,17 +97,17 @@ const AboutPageIndex = () => {
 						{ src: "/assets/images/interest3.png", title: "Overwatch 2" },
 						{ src: "/assets/images/interest4.png", title: "K-Pop" },
 					].map((item) => (
-						<div key={item.src} className="col-center gap-17.75">
+						<div key={item.src} className="col-center gap-8 md:gap-17.75">
 							<div className="aspect-square flex-center">
 								<Image
 									width={304}
 									height={304}
 									src={item.src}
 									alt=""
-									className="object-cover w-full h-full"
+									className="object-cover aspect-square"
 								/>
 							</div>
-							<h5 className="text-[2rem] font-medium font-syne leading-[1.05] text-center">
+							<h5 className="text-xl md:text-[2rem] font-medium font-syne leading-[1.05] text-center">
 								{item.title}
 							</h5>
 						</div>
@@ -122,7 +122,7 @@ export default AboutPageIndex;
 
 const Title = ({ title }: { title: string }) => {
 	return (
-		<h2 className="uppercase text-6xl text-center mb-14 font-syne">
+		<h2 className="uppercase text-3xl md:text-6xl text-center mb-14 font-syne">
 			{title}
 		</h2>
 	);
