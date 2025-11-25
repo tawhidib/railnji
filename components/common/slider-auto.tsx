@@ -9,26 +9,14 @@ import AngleIcon from "../icons/angle-icon";
 
 type SliderAutoProps<T> = SwiperProps & {
 	data: T[];
-	groupSize?: number;
 	renderItem: (item: T, index: number) => React.ReactNode;
 	containerClassName?: string;
 	swiperClassName?: string;
 	spaceBetween?: number;
 };
 
-function chunkArray<T>(arr: T[], groupSize: number): T[][] {
-	if (groupSize <= 0) throw new Error("groupSize must be greater than 0");
-
-	const result: T[][] = [];
-	for (let i = 0; i < arr.length; i += groupSize) {
-		result.push(arr.slice(i, i + groupSize));
-	}
-	return result;
-}
-
 export default function SliderAuto<T>({
 	data,
-	groupSize = 1,
 	renderItem,
 	containerClassName,
 	swiperClassName,
@@ -38,9 +26,6 @@ export default function SliderAuto<T>({
 	const [swiper, setSwiper] = useState<SwiperType | null>(null);
 	const [isBeginning, setIsBeginning] = useState(true);
 	const [isEnd, setIsEnd] = useState(false);
-
-	const groupedData =
-		groupSize > 1 ? chunkArray(data, groupSize) : data.map((item) => [item]);
 
 	const handleNext = () => {
 		swiper?.slideNext();
@@ -121,13 +106,9 @@ export default function SliderAuto<T>({
 					updateNavigationState(swiperInstance);
 				}}
 			>
-				{groupedData.map((group, groupIndex) => (
-					<SwiperSlide key={groupIndex} className={cn(swiperClassName)}>
-						<div className="grid gap-4">
-							{group.map((item, itemIndex) =>
-								renderItem(item, itemIndex)
-							)}
-						</div>
+				{data.map((item, itemIndex) => (
+					<SwiperSlide key={itemIndex} className={cn(swiperClassName)}>
+						{renderItem(item, itemIndex)}
 					</SwiperSlide>
 				))}
 			</Swiper>

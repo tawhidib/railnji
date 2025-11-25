@@ -24,7 +24,7 @@ const AboutPageIndex = () => {
 	];
 	return (
 		<>
-			<header className="h-screen bg-[url('/assets/images/about-hero.jpg')] bg-cover bg-center relative">
+			<header className="min-h-screen bg-[url('/assets/images/about-hero.jpg')] bg-cover bg-center relative">
 				<div className="w-full h-full bg-text3/30">
 					<div className="main-container col gap-2 pt-50">
 						<PageTitle title="About Us" />
