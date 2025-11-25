@@ -48,11 +48,11 @@ export default function Footer() {
 					<div className="col gap-10">
 						<Link
 							href="/"
-							className="leading-[0.9] font-semibold text-black text-[2.5rem] "
+							className="leading-[0.9] font-semibold text-black text-3xl md:text-[2.5rem] "
 						>
 							INJI SO
 						</Link>
-						<p className="mt-px text-black/70 leading-[1.32] text-lg md:text-[1.375rem]">
+						<p className="mt-px text-black/70 leading-[1.32] text-base md:text-[1.375rem]">
 							Producer & director who stays up late{" "}
 							<br className="hidden lg:block" /> to create stories worth
 							staying up late for
@@ -108,13 +108,13 @@ const Links = ({
 }) => {
 	return (
 		<div className="col gap-6">
-			<h5 className="font-semibold md:text-xl text-lg leading-[0.9] text-black capitalize">
+			<h5 className="font-semibold md:text-xl text-base leading-[0.9] text-black capitalize">
 				{title}
 			</h5>
 			<div className="col gap-5">
 				{links.map(({ label, href }) => (
 					<Link
-						className="leading-[0.9] md:text-xl text-lg text-black/70 w-fit"
+						className="leading-[0.9] md:text-xl text-base text-black/70 w-fit"
 						key={label}
 						href={href}
 					>
