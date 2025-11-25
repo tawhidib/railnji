@@ -2,6 +2,26 @@ import { PageSubtitle, PageTitle } from "@/components/common/page-title";
 import Image from "next/image";
 
 const AboutPageIndex = () => {
+	const timelineData = [
+		{
+			year: 2016,
+			title: "Assistant Director at MBC",
+			description:
+				"High profile shows : Infinite Challenge, Unexpected Q, My Little Television V2",
+		},
+		{
+			year: 2020,
+			title: "Chief Assistant Director at MBC",
+			description:
+				"High profile shows: Show! Music Core, The Masked Singers, The Paik Father",
+		},
+		{
+			year: 2023,
+			title: "Director / Producer at MBC",
+			description:
+				"High profile shows: Hang Out with Yoo, Where is my home, Alumni Lovers",
+		},
+	];
 	return (
 		<>
 			<header className="h-screen bg-[url('/assets/images/about-hero.jpg')] bg-cover bg-center relative">
@@ -25,49 +45,37 @@ const AboutPageIndex = () => {
 					<Title title="WORK EXPERIENCE" />
 					<div className="bg-[#D9D9D9] rounded-[15px] h-102.5" />
 					<div className="px-10.5 pt-10.5 col">
-						{[
-							{
-								year: 2016,
-								title: "Assistant Director at MBC",
-								description:
-									"High profile shows : Infinite Challenge, Unexpected Q, My Little Television V2",
-							},
-							{
-								year: 2020,
-								title: "Chief Assistant Director at MBC",
-								description:
-									"High profile shows: Show! Music Core, The Masked Singers, The Paik Father",
-							},
-							{
-								year: 2023,
-								title: "Director / Producer at MBC",
-								description:
-									"High profile shows: Hang Out with Yoo, Where is my home, Alumni Lovers",
-							},
-						].map((item) => (
-							<div key={item.year} className="relative flex gap-8">
+						{timelineData.map((item) => (
+							<div
+								key={item.year}
+								className="relative flex items-baseline"
+							>
 								{/* Year */}
-								<div className="w-12 text-right font-medium text-lg">
-									{item.year}
+								<div className="flex-between w-23.25">
+									<h4 className="font-medium text-2xl leading-[0.9] text-black">
+										{item.year}
+									</h4>
+
+									{/* Dot */}
+									<span className="bg-[#202020] size-3.5 rounded-full" />
 								</div>
 
-								{/* Dot */}
-								<div className="absolute left-[18px] top-1 h-3 w-3 rounded-full bg-black" />
+								<span
+									className="w-px border border-solid border-image-source:linear-gradient(270deg,#202020_0%,rgba(134,134,134,0.12)_100%)] 
+[border-image-slice:1] self-stretch -ms-2 -z-1"
+								/>
 
 								{/* Content */}
-								<div className="flex-1">
-									<h3 className="text-xl font-semibold">
+								<div className="w-full col pb-9.5 ps-8">
+									<h3 className="font-medium text-[1.375rem] leading-[0.9] text-black">
 										{item.title}
 									</h3>
 
-									<p className="mt-1 text-gray-700">
-										<span className="font-medium">
-											High profile shows:
-										</span>{" "}
+									<p className="text-2xl leading-[0.9] mt-6">
 										{item.description}
 									</p>
 
-									<div className="mt-3 h-px w-full bg-black/25" />
+									<div className="mt-5 h-px w-full bg-black" />
 								</div>
 							</div>
 						))}
