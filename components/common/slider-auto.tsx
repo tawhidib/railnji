@@ -76,20 +76,6 @@ export default function SliderAuto<T>({
 				slidesPerView="auto"
 				spaceBetween={spaceBetween}
 				modules={[Navigation]}
-				breakpoints={{
-					0: {
-						slidesPerView: 1.2,
-					},
-					640: {
-						slidesPerView: 2.2,
-					},
-					768: {
-						slidesPerView: 3.2,
-					},
-					1024: {
-						slidesPerView: 4.2,
-					},
-				}}
 				{...swiperProps}
 				className={cn("mySwiper py-5!", swiperProps.className)}
 				onSwiper={(swiperInstance) => {

@@ -2,16 +2,44 @@
 
 import { PageSubtitle, PageTitle } from "@/components/common/page-title";
 import SliderAuto from "@/components/common/slider-auto";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const FilmographyPageIndex = () => {
+	const container = "col gap-3.5 w-full";
+	const title = "text-sm md:text-2xl leading-[0.9] text-black font-medium";
+	const img = "object-cover h-full rounded-xl w-full aspect-580/416";
+	const breakpoints = {
+		0: {
+			slidesPerView: 1.2,
+		},
+		640: {
+			slidesPerView: 1.3,
+		},
+		768: {
+			slidesPerView: 1.8,
+		},
+		1024: {
+			slidesPerView: 2.2,
+		},
+	};
 	return (
 		<>
 			<header className="w-full h-full bg-text3/30 bg-[url('/assets/images/filmography-bg.png')] bg-cover bg-center bg-no-repeat relative min-h-[80vh]">
 				<div className="main-container col gap-2 pt-50">
 					<PageTitle title="Filmography" />
-					<PageSubtitle text="Producer & director who stays up to late to create stories" />
-					<PageSubtitle text="worth staying up late for" />
+					<PageSubtitle
+						className="md:hidden"
+						text="Producer & director who stays up to late to create stories worth staying up late for"
+					/>
+					<PageSubtitle
+						className="max-md:hidden"
+						text="Producer & director who stays up to late to create stories"
+					/>
+					<PageSubtitle
+						className="max-md:hidden"
+						text="worth staying up late for"
+					/>
 				</div>
 				<Image
 					width={1701}
@@ -22,7 +50,7 @@ const FilmographyPageIndex = () => {
 				/>
 			</header>
 			<div className="relative">
-				<div className="col gap-35 pt-30 pb-54 main-container">
+				<div className="col gap-10 xl:gap-35 pt-30 pb-54 main-container">
 					{/* reality show  */}
 					<div className="col gap-3">
 						<Title text="variety/reality show" />
@@ -44,22 +72,19 @@ const FilmographyPageIndex = () => {
 										title: "Alumni Lovers",
 									},
 								]}
-								breakpoints={{}}
+								breakpoints={breakpoints}
 								renderItem={(item) => (
-									<div key={item.src} className="col gap-3.5 w-145">
+									<div key={item.src} className={cn(container)}>
 										<Image
 											width={580}
 											height={416}
 											src={item.src}
 											alt=""
-											className="object-cover h-full rounded-xl w-145 aspect-580/416"
+											className={cn(img)}
 										/>
-										<p className="text-2xl leading-[0.9] text-black font-medium">
-											{item.title}
-										</p>
+										<p className={cn(title)}>{item.title}</p>
 									</div>
 								)}
-								swiperClassName="w-145!"
 								containerClassName=""
 							/>
 						</div>
@@ -85,22 +110,19 @@ const FilmographyPageIndex = () => {
 										title: "Under Nineteen",
 									},
 								]}
-								breakpoints={{}}
+								breakpoints={breakpoints}
 								renderItem={(item) => (
-									<div key={item.src} className="col gap-3.5 w-145">
+									<div key={item.src} className={cn(container)}>
 										<Image
 											width={580}
 											height={416}
 											src={item.src}
 											alt=""
-											className="object-cover h-full rounded-xl w-145 aspect-580/416"
+											className={cn(img)}
 										/>
-										<p className="text-2xl leading-[0.9] text-black font-medium">
-											{item.title}
-										</p>
+										<p className={cn(title)}>{item.title}</p>
 									</div>
 								)}
-								swiperClassName="w-145!"
 								containerClassName=""
 							/>
 						</div>
@@ -126,22 +148,19 @@ const FilmographyPageIndex = () => {
 										title: "My Little Television",
 									},
 								]}
-								breakpoints={{}}
+								breakpoints={breakpoints}
 								renderItem={(item) => (
-									<div key={item.src} className="col gap-3.5 w-145">
+									<div key={item.src} className={cn(container)}>
 										<Image
 											width={580}
 											height={416}
 											src={item.src}
 											alt=""
-											className="object-cover h-full rounded-xl w-145 aspect-580/416"
+											className={cn(img)}
 										/>
-										<p className="text-2xl leading-[0.9] text-black font-medium">
-											{item.title}
-										</p>
+										<p className={cn(title)}>{item.title}</p>
 									</div>
 								)}
-								swiperClassName="w-145!"
 								containerClassName=""
 							/>
 						</div>
@@ -164,17 +183,13 @@ const FilmographyPageIndex = () => {
 										title: "Program Name",
 									},
 								]}
-								breakpoints={{}}
 								renderItem={(item) => (
-									<div key={item.title} className="col gap-3.5 w-145">
-										<div className="bg-[#C4C4C4] h-full rounded-xl w-145 aspect-580/416" />
-										<p className="text-2xl leading-[0.9] text-black font-medium">
-											{item.title}
-										</p>
+									<div key={item.title} className={cn(container)}>
+										<div className="bg-[#C4C4C4] rounded-xl w-full aspect-580/416" />
+										<p className={cn(title)}>{item.title}</p>
 									</div>
 								)}
-								swiperClassName="w-145!"
-								containerClassName=""
+								breakpoints={breakpoints}
 							/>
 						</div>
 					</div>
@@ -195,6 +210,8 @@ export default FilmographyPageIndex;
 
 const Title = ({ text }: { text: string }) => {
 	return (
-		<h3 className="text-5xl leading-[0.9] uppercase text-black">{text}</h3>
+		<h3 className="text-xl md:text-5xl leading-[0.9] uppercase text-black">
+			{text}
+		</h3>
 	);
 };
