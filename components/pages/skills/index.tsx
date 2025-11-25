@@ -92,22 +92,22 @@ const SkillsPageIndex = () => {
 		<>
 			<header className="bg-[url('/assets/images/skills-header-bg.png')] bg-center bg-cover relative flex-center">
 				<div className="container">
-					<div className="col-center gap-6 mt-77.5">
+					<div className="col-center gap-4 md:gap-6 pt-40 lg:pt-77.5">
 						<Image
-							className="aspect-55/45 object-cover"
+							className="aspect-55/45 object-cover max-md:scale-60"
 							width={55}
 							height={45}
 							src="/assets/images/appos.png"
 							alt=""
 						/>
-						<p className="text-center text-[2rem] leading-[1.4] font-normal text-black">
+						<p className="text-center text-2xl md:text-[2rem] leading-[1.4] font-normal text-black">
 							Great concepts are born from a deep understanding of
 							technology. <br />I explore production methods that bridge
-							innovation with the <br />
+							innovation with the <br className="max-md:hidden" />
 							audience’s experience.
 						</p>
 						<Image
-							className="aspect-55/45 object-cover rotate-180"
+							className="aspect-55/45 object-cover rotate-180 max-md:scale-60"
 							width={55}
 							height={45}
 							src="/assets/images/appos.png"
@@ -115,7 +115,7 @@ const SkillsPageIndex = () => {
 						/>
 					</div>
 					<div className="flex-center">
-						<div className="mt-43 flex items-center gap-7.5">
+						<div className="mt-20 md:mt-16 lg:mt-43 flex flex-col lg:flex-row items-center gap-7.5">
 							{skills.map((skill, index) => (
 								<div
 									key={index}
@@ -145,24 +145,24 @@ const SkillsPageIndex = () => {
 					className="pointer-events-none absolute h-[318px] top-full w-full left-0 -translate-y-1/2"
 				/>
 			</header>
-			<div className="py-30">
-				<div className="container col gap-30">
+			<div className="py-15 md:py-30 mt-15">
+				<div className="container col gap-10 md:gap-30">
 					<div className="flex flex-col gap-14">
 						<Title title="TOOLS" />
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
 							{tools?.map((item) => (
 								<div
 									key={item.title}
-									className="col items-start gap-14"
+									className="col items-start gap-4 md:gap-14"
 								>
 									<ItemTitle title={item.title} />
-									<div className="col items-start gap-6">
+									<div className="col items-start gap-3 md:gap-6">
 										{item.skills?.map((skill) => (
 											<div
 												key={skill.title}
-												className="flex items-center gap-5"
+												className="flex items-center gap-2.5 md:gap-5"
 											>
-												<span className="size-20 flex-center">
+												<span className="size-10 md:size-15 lg:size-20  flex-center">
 													<Image
 														width={80}
 														height={80}
@@ -194,7 +194,7 @@ const SkillsPageIndex = () => {
 												key={skill.title}
 												className="flex items-center gap-5"
 											>
-												<span className="w-15 h-10 flex-center">
+												<span className="w-8 md:w-15 h-5 md:h-10 flex-center">
 													<Image
 														width={60}
 														height={40.15}
@@ -221,7 +221,7 @@ export default SkillsPageIndex;
 
 const Title = ({ title }: { title: string }) => {
 	return (
-		<h3 className="font-medium text-[2.5rem] leading-[1.4] text-center text-black">
+		<h3 className="font-medium text-4xl md:text-[2.5rem] leading-[1.4] text-center text-black">
 			{title}
 		</h3>
 	);
@@ -229,14 +229,14 @@ const Title = ({ title }: { title: string }) => {
 
 const ItemTitle = ({ title }: { title: string }) => {
 	return (
-		<h4 className="w-full font-medium text-2xl text-center text-black leading-[0.9]">
+		<h4 className="w-full text-start font-medium text-2xl md:text-center text-black leading-[0.9]">
 			{title}
 		</h4>
 	);
 };
 const ItemName = ({ title }: { title: string }) => {
 	return (
-		<h5 className="font-medium text-[1.375rem] text-center text-black leading-[0.9]">
+		<h5 className="font-medium text-base md:text-[1.375rem] text-center text-black leading-[0.9]">
 			{title}
 		</h5>
 	);
