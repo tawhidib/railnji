@@ -23,7 +23,7 @@ export default function SectionTopArea({
 			{href ? (
 				<Link
 					href={href}
-					className="text-text3 text-sm md:text-base leading-loose font-medium rounded-[0.875rem] px-5 md:px-9 hero-link uppercase"
+					className="text-text3 text-sm md:text-base leading-loose font-medium rounded-[0.875rem] px-5 md:px-9 hero-link uppercase h-15"
 				>
 					see all
 				</Link>

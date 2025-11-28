@@ -166,7 +166,7 @@
 		@apply mx-auto px-4 xl:px-0 max-w-303;
 	}
 	.hero-link {
-		@apply bg-white/10 backdrop-blur-[35px] rounded-[24px] relative;
+		@apply bg-white/10 backdrop-blur-[35px] rounded-[24px] relative  flex items-center justify-center;
 	}
 	.hero-link::before {
 		border: 3px solid transparent;
