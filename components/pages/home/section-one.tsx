@@ -4,15 +4,13 @@ import Image from "next/image";
 export default function SectionOne() {
 	return (
 		<div id="about-me" className="w-full max-w-[86.688rem] mx-auto px-6.25">
-			<div className="bg-[#838383] py-14.75 p-5 md:px-17 rounded-[0.938rem] min-h-135 relative md:-mt-[358px] overflow-hidden">
-				<div className="grid grid-cols-1 sm:grid-cols-2 h-full gap-x-5 gap-y-10">
-					<div className="col gap-5">
-						<SectionNumberTitle
-							number="01/"
-							title="about me"
-							className="text-white"
-						/>
-					</div>
+			<div className="bg-[#838383] py-14.75 p-5 md:px-17 rounded-[0.938rem] min-h-135 relative md:-mt-[358px] overflow-hidden flex items-stretch">
+				<div className="grid grid-cols-1 sm:grid-cols-2 h-full gap-x-5 gap-y-10 w-full">
+					<SectionNumberTitle
+						number="01/"
+						title="about me"
+						className="text-white"
+					/>
 					<div className="h-full flex flex-col justify-center before:content-[''] before:w-[70.66px] before:h-[1.27px] before:bg-white before:mb-6">
 						<p className="text-white font-light text-[1.375rem] leading-[1.48] tracking-[4%]">
 							TV producer & director <br /> with a decade of experience.

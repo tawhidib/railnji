@@ -16,7 +16,7 @@ export default function SectionTopArea({
 		<div className={cn("flex-between", className)}>
 			<div className="col gap-5">
 				<span className="bg-black h-[1.5px] w-8 md:w-10 lg:w-12.5" />
-				<h3 className="text-black font-medium text-lg md:text-2xl -leading-[90%]">
+				<h3 className="text-black font-medium text-lg md:text-2xl leading-[90%]">
 					{text}
 				</h3>
 			</div>
