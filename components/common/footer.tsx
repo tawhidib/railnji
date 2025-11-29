@@ -14,7 +14,7 @@ export default function Footer() {
 						alt=""
 						width={1346.98}
 						height={1318.63}
-						className="bottom-0 left-0 absolute -z-1"
+						className="bottom-0 -left-1/7 absolute -z-1"
 					/>
 				);
 			case "/about":

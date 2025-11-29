@@ -6,7 +6,7 @@ export default function NewsWritingsSection() {
 	return (
 		<div className="md:pb-54.5 container">
 			<SectionNumberTitle number="03/" title="news & writings" />
-			<div className="py-6 max-md:mb-6 md:py-15.5 max-w-[1200px] mx-auto">
+			<div className="pt-6 max-md:mb-6 md:pt-15.5 max-w-[1200px] mx-auto">
 				<SliderAuto
 					slidesPerView={"auto"}
 					data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
