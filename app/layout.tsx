@@ -1,28 +1,9 @@
 import Footer from "@/components/common/footer";
 import Navbar from "@/components/common/navbar";
 import type { Metadata } from "next";
-import { DM_Sans, Poppins, Syne } from "next/font/google";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./globals.css";
-
-const syne = Syne({
-	subsets: ["latin"],
-	variable: "--font-syne",
-	weight: ["400", "500", "600", "700", "800"],
-});
-
-const dmSans = DM_Sans({
-	subsets: ["latin"],
-	variable: "--font-dm-sans",
-	weight: ["400", "500", "600", "700", "800"],
-});
-
-const poppins = Poppins({
-	subsets: ["latin"],
-	variable: "--font-poppins",
-	weight: ["400", "500", "600", "700", "800"],
-});
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -36,10 +17,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`antialiased ${syne.className} ${dmSans.className} ${poppins.className}`}
-				suppressHydrationWarning={true}
-			>
+			<body className={`antialiased`} suppressHydrationWarning={true}>
 				<Navbar />
 				{children}
 				<Footer />
