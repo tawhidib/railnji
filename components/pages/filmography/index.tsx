@@ -199,7 +199,7 @@ const FilmographyPageIndex = () => {
 					height={1066.9257666078272}
 					src="/assets/images/filmography-shape.png"
 					alt=""
-					className="absolute top-10 right-0"
+					className="absolute right-0"
 				/>
 			</div>
 		</>
