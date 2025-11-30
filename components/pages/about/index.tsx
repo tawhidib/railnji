@@ -47,41 +47,41 @@ const AboutPageIndex = () => {
 				<div className="mx-auto w-full max-w-[1117px] pt-27 md:pt-35">
 					<Title title="WORK EXPERIENCE" />
 					<div className="bg-[#D9D9D9] rounded-[15px] h-102.5" />
-					<div className="md:px-10.5 pt-10.5 col">
-						{timelineData.map((item) => (
-							<div
-								key={item.year}
-								className="relative flex items-baseline"
-							>
-								{/* Year */}
-								<div className="flex-between w-23.25">
-									<h4 className="font-medium text-base md:text-2xl leading-[0.9] text-black">
-										{item.year}
-									</h4>
+					<div className="md:px-10.5 pt-10.5">
+						<div className="relative">
+							<span className="w-px bg-[linear-gradient(0deg,#202020_0%,rgba(134,134,134,0.12)_100%)] pointer-events-none absolute h-[calc(100%-25px)] left-19.5" />
+							<div className="col relative">
+								{timelineData.map((item) => (
+									<div
+										key={item.year}
+										className="relative flex items-baseline"
+									>
+										{/* Year */}
+										<div className="flex-between w-23.25">
+											<h4 className="font-medium text-base md:text-2xl leading-[0.9] text-black">
+												{item.year}
+											</h4>
 
-									{/* Dot */}
-									<span className="bg-[#202020] size-2 md:size-3.5 rounded-full" />
-								</div>
+											{/* Dot */}
+											<span className="bg-[#202020] size-2 md:size-3.5 rounded-full" />
+										</div>
 
-								<span
-									className="w-px border border-solid border-image-source:linear-gradient(270deg,#202020_0%,rgba(134,134,134,0.12)_100%)] 
-[border-image-slice:1] self-stretch -ms-1.25 md:-ms-2 -z-1"
-								/>
+										{/* Content */}
+										<div className="w-full col pb-9.5 ps-4 md:ps-8">
+											<h3 className="font-medium text-lg md:text-[1.75rem] leading-[0.9] text-black">
+												{item.title}
+											</h3>
 
-								{/* Content */}
-								<div className="w-full col pb-9.5 ps-4 md:ps-8">
-									<h3 className="font-medium text-lg md:text-[1.75rem] leading-[0.9] text-black">
-										{item.title}
-									</h3>
+											<p className="text-base md:text-2xl leading-[0.9] mt-6">
+												{item.description}
+											</p>
 
-									<p className="text-base md:text-2xl leading-[0.9] mt-6">
-										{item.description}
-									</p>
-
-									<div className="mt-5 h-px w-full bg-black" />
-								</div>
+											<div className="mt-5 h-px w-full bg-black" />
+										</div>
+									</div>
+								))}
 							</div>
-						))}
+						</div>
 					</div>
 				</div>
 			</div>
