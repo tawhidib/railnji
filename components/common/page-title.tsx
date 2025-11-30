@@ -11,7 +11,7 @@ export const PageTitle = ({
 	return (
 		<h1
 			className={cn(
-				"text-5xl sm:text-7xl lg:text-[10.625rem] text-white leading-[0.9] uppercase",
+				"text-5xl sm:text-7xl lg:text-[10.625rem] text-white leading-[0.9] uppercase font-noken",
 				className
 			)}
 		>
