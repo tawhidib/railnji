@@ -152,29 +152,30 @@ const SkillsPageIndex = () => {
 						<Title title="TOOLS" />
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 							{tools?.map((item) => (
-								<div
-									key={item.title}
-									className="col items-start gap-4 md:gap-14 whitish-gradient-border"
-								>
-									<ItemTitle title={item.title} />
-									<div className="col items-start gap-3 md:gap-6">
-										{item.skills?.map((skill) => (
-											<div
-												key={skill.title}
-												className="flex items-center gap-2.5 md:gap-5"
-											>
-												<span className="size-10 md:size-15 lg:size-20  flex-center">
-													<Image
-														width={80}
-														height={80}
-														src={skill.src}
-														alt=""
-														className="object-cover"
+								<div key={item.title}>
+									<div className="col items-start gap-4 md:gap-14 whitish-gradient-border">
+										<ItemTitle title={item.title} />
+										<div className="col items-start gap-3 md:gap-6">
+											{item.skills?.map((skill) => (
+												<div
+													key={skill.title}
+													className="flex items-center gap-2.5 md:gap-5"
+												>
+													<span className="size-10 md:size-15 lg:size-20  flex-center">
+														<Image
+															width={80}
+															height={80}
+															src={skill.src}
+															alt=""
+															className="object-cover"
+														/>
+													</span>
+													<ItemName
+														title={skill.title}
 													/>
-												</span>
-												<ItemName title={skill.title} />
-											</div>
-										))}
+												</div>
+											))}
+										</div>
 									</div>
 								</div>
 							))}
