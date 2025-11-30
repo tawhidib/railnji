@@ -185,11 +185,9 @@
 		@apply mx-auto px-4 xl:px-0 max-w-303;
 	}
 	.hero-link {
-		@apply bg-white/10 backdrop-blur-[35px] rounded-[24px] relative  flex items-center justify-center;
+		@apply bg-white/10 backdrop-blur-[35px] rounded-[14px] relative  flex items-center justify-center;
 	}
 	.hero-link::before {
-		border: 3px solid transparent;
-		background: linear-gradient(45deg, #d8308d, #e770ab) border-box;
 		mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
 		-webkit-mask: linear-gradient(#fff 0 0) padding-box,
 			linear-gradient(#fff 0 0);
@@ -200,12 +198,13 @@
 		content: "";
 		z-index: 1;
 		background: linear-gradient(
-			155.31deg,
-			rgba(255, 255, 255, 0.5) 12.33%,
-			rgba(255, 255, 255, 0.3) 34.31%,
-			rgba(255, 255, 255, 0.3) 52.66%,
-			rgba(255, 255, 255, 0.54) 74.67%
-		);
+				159deg,
+				rgba(255, 255, 255, 1) 12.33%,
+				rgba(255, 255, 255, 0.3) 34.31%,
+				rgba(255, 255, 255, 0.3) 52.66%,
+				rgba(255, 255, 255, 1) 74.67%
+			)
+			border-box;
 		transition: all ease 0.3s;
 	}
 	.hero-link:hover {
@@ -214,12 +213,45 @@
 	}
 	.hero-link:hover::before {
 		background: linear-gradient(
-			155.31deg,
-			rgba(0, 0, 0, 0.5) 12.33%,
-			rgba(0, 0, 0, 0.3) 34.31%,
-			rgba(0, 0, 0, 0.3) 52.66%,
-			rgba(0, 0, 0, 0.54) 74.67%
-		);
+				95.67deg,
+				rgba(0, 0, 0, 0.8) 10.51%,
+				rgba(0, 0, 0, 0.056) 111.31%
+			)
+			border-box;
+	}
+	.mix-blend-overlay {
+		mix-blend-mode: overlay;
+	}
+	.next-btn,
+	.prev-btn {
+		@apply absolute rounded text-white w-9.75 h-[66px] flex justify-center items-center top-1/2 z-[50];
+	}
+	.prev-btn {
+		@apply -translate-y-1/2 rotate-180 left-6;
+	}
+	.next-btn {
+		@apply -translate-y-1/2 right-6;
+	}
+	.next-btn::before,
+	.prev-btn::before {
+		mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+		-webkit-mask: linear-gradient(#fff 0 0) padding-box,
+			linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		border-radius: inherit;
+		@apply border-[3px] border-transparent absolute inset-0;
+		content: "";
+		z-index: 1;
+		background: linear-gradient(
+				55deg,
+				rgba(255, 255, 255, 1) 12.33%,
+				rgba(255, 255, 255, 0.3) 34.31%,
+				rgba(255, 255, 255, 0.3) 52.66%,
+				rgba(255, 255, 255, 1) 74.67%
+			)
+			border-box;
+		transition: all ease 0.3s;
 	}
 }
 
@@ -230,7 +262,10 @@
 		#111111 100%
 	);
 }
-
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
+}
 body {
 	@apply bg-background text-text font-dm-sans;
 }

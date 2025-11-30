@@ -4,7 +4,7 @@ import SliderAuto from "@/components/common/slider-auto";
 
 export default function NewsWritingsSection() {
 	return (
-		<div className="md:pb-54.5 container">
+		<div className="md:pb-54.5 container" id="skills">
 			<SectionNumberTitle number="03/" title="news & writings" />
 			<div className="pt-6 max-md:mb-6 md:pt-15.5 max-w-[1200px] mx-auto">
 				<SliderAuto

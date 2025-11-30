@@ -45,32 +45,24 @@ export default function SliderAuto<T>({
 		<div className={cn("relative", containerClassName)}>
 			{/* Left Arrow */}
 			{isBeginning ? null : (
-				<div className="from-body via-body/70 to-body/0 absolute top-0 left-0 z-10 hidden h-[calc(100%)] w-[60px] cursor-pointer items-center justify-center bg-linear-to-r md:flex">
-					<button
-						className={cn(
-							"flex-center bg-card text-dark absolute top-1/2 left-1/2 z-10 size-10 -translate-x-1/2 -translate-y-1/2 rotate-180 rounded-full shadow-md transition-all"
-						)}
-						onClick={handlePrev}
-						disabled={isBeginning}
-					>
-						<AngleIcon />
-					</button>
-				</div>
+				<button
+					className={cn("prev-btn")}
+					onClick={handlePrev}
+					disabled={isBeginning}
+				>
+					<AngleIcon />
+				</button>
 			)}
 
 			{/* Right Arrow */}
 			{isEnd ? null : (
-				<div className="from-body via-body/70 to-body/0 absolute top-0 right-0 z-10 hidden h-[calc(100%)] w-[60px] cursor-pointer items-center justify-center bg-linear-to-l md:flex">
-					<button
-						className={cn(
-							"flex-center bg-card text-dark absolute top-1/2 left-1/2 z-10 size-10 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-md transition-all"
-						)}
-						onClick={handleNext}
-						disabled={isEnd}
-					>
-						<AngleIcon />
-					</button>
-				</div>
+				<button
+					className={cn("next-btn")}
+					onClick={handleNext}
+					disabled={isEnd}
+				>
+					<AngleIcon />
+				</button>
 			)}
 			<Swiper
 				slidesPerView="auto"
@@ -93,7 +85,10 @@ export default function SliderAuto<T>({
 				}}
 			>
 				{data.map((item, itemIndex) => (
-					<SwiperSlide key={itemIndex} className={cn(swiperClassName)}>
+					<SwiperSlide
+						key={itemIndex}
+						className={cn(swiperClassName)}
+					>
 						{renderItem(item, itemIndex)}
 					</SwiperSlide>
 				))}

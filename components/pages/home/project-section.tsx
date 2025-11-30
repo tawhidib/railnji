@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ProjectSection() {
 	return (
-		<div className="relative overflow-hidden">
+		<div className="relative overflow-hidden" id="filmography">
 			<div className="col gap-10 md:gap-20.5 container py-15 md:py-30 relative">
 				<SectionNumberTitle number="02/" title="projects" />
 				<div>
@@ -28,11 +28,12 @@ export default function ProjectSection() {
 							className="grow-490 aspect-490/562 bg-[url('/assets/images/live-show.jpg')] bg-center"
 						/>
 					</div>
-					<SectionTopArea
-						className="mt-12 mb-8"
-						text="3D Animation/Art Works"
-						href="/art-works"
-					/>
+					<div className="mt-12 mb-8" id="art-works">
+						<SectionTopArea
+							text="3D Animation/Art Works"
+							href="/art-works"
+						/>
+					</div>
 					<ImageView className="w-full aspect-1200/594 bg-[url('/assets/images/3d-art.png')] mb-5" />
 				</div>
 			</div>
