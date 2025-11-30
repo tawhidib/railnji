@@ -29,16 +29,8 @@ const FilmographyPageIndex = () => {
 				<div className="main-container col gap-2 pt-50">
 					<PageTitle title="Filmography" />
 					<PageSubtitle
-						className="md:hidden"
+						className="max-w-163"
 						text="Producer & director who stays up to late to create stories worth staying up late for"
-					/>
-					<PageSubtitle
-						className="max-md:hidden"
-						text="Producer & director who stays up to late to create stories"
-					/>
-					<PageSubtitle
-						className="max-md:hidden"
-						text="worth staying up late for"
 					/>
 				</div>
 				<Image
@@ -210,7 +202,7 @@ export default FilmographyPageIndex;
 
 const Title = ({ text }: { text: string }) => {
 	return (
-		<h3 className="text-xl md:text-5xl leading-[0.9] uppercase text-black">
+		<h3 className="text-xl md:text-5xl leading-[0.9] uppercase text-black font-noken">
 			{text}
 		</h3>
 	);

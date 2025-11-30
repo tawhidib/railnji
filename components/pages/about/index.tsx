@@ -25,20 +25,22 @@ const AboutPageIndex = () => {
 	return (
 		<>
 			<header className="min-h-screen bg-[url('/assets/images/about-hero.jpg')] bg-cover bg-center relative">
-				<div className="w-full h-full bg-text3/30">
-					<div className="main-container col gap-2 pt-50">
-						<PageTitle title="About Us" />
-						<PageSubtitle text="From fangirl to producer — still creating with the heart of a fan." />
+				<div className="absolute inset-0 h-full w-full z-1 bg-text3/30">
+					<div className="w-full h-full z-10">
+						<div className="main-container col gap-2 pt-50">
+							<PageTitle title="About Us" />
+							<PageSubtitle text="From fangirl to producer — still creating with the heart of a fan." />
+						</div>
 					</div>
 				</div>
-				<Image
-					width={1701}
-					height={318}
-					src="/assets/images/rectangle.png"
-					alt=""
-					className="pointer-events-none absolute h-[200px] top-full w-full left-0 -translate-y-1/3"
-				/>
 			</header>
+			<Image
+				width={1701}
+				height={318}
+				src="/assets/images/rectangle.png"
+				alt=""
+				className="pointer-events-none absolute h-[200px] top-full w-full left-0 -translate-y-1/3 z-20"
+			/>
 
 			<div className="container">
 				<div className="mx-auto w-full max-w-[1117px] pt-27 md:pt-35">

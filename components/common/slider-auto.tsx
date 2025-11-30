@@ -77,7 +77,7 @@ export default function SliderAuto<T>({
 				spaceBetween={spaceBetween}
 				modules={[Navigation]}
 				{...swiperProps}
-				className={cn("mySwiper py-5!", swiperProps.className)}
+				className={cn("mySwiper", swiperProps.className)}
 				onSwiper={(swiperInstance) => {
 					setSwiper(swiperInstance);
 					updateNavigationState(swiperInstance);
