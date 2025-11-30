@@ -128,7 +128,7 @@ const SkillsPageIndex = () => {
 										<span className="size-15 flex-center">
 											{skill.icon}
 										</span>
-										<h4 className="text-lg font-medium text-center leading-[1.33] tracking-[2%]">
+										<h4 className="text-lg font-medium text-center leading-[1.33] tracking-[2%] max-w-30">
 											{skill.title}
 										</h4>
 									</div>
@@ -221,7 +221,7 @@ export default SkillsPageIndex;
 
 const Title = ({ title }: { title: string }) => {
 	return (
-		<h3 className="font-medium text-4xl md:text-[2.5rem] leading-[1.4] text-center text-black">
+		<h3 className="font-medium font-syne text-4xl md:text-[2.5rem] leading-[1.4] text-center text-black">
 			{title}
 		</h3>
 	);
