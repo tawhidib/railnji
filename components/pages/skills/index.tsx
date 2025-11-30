@@ -102,8 +102,9 @@ const SkillsPageIndex = () => {
 						/>
 						<p className="text-center text-2xl md:text-[2rem] leading-[1.4] font-normal text-black">
 							Great concepts are born from a deep understanding of
-							technology. <br />I explore production methods that bridge
-							innovation with the <br className="max-md:hidden" />
+							technology. <br />I explore production methods that
+							bridge innovation with the{" "}
+							<br className="max-md:hidden" />
 							audience’s experience.
 						</p>
 						<Image
@@ -146,14 +147,14 @@ const SkillsPageIndex = () => {
 				/>
 			</header>
 			<div className="py-15 md:py-30 mt-15">
-				<div className="container col gap-10 md:gap-30">
+				<div className="container col gap-10 md:gap-30 xl:max-w-[1440px]!">
 					<div className="flex flex-col gap-14">
 						<Title title="TOOLS" />
-						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14">
+						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 							{tools?.map((item) => (
 								<div
 									key={item.title}
-									className="col items-start gap-4 md:gap-14"
+									className="col items-start gap-4 md:gap-14 whitish-gradient-border"
 								>
 									<ItemTitle title={item.title} />
 									<div className="col items-start gap-3 md:gap-6">

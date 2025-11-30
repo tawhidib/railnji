@@ -296,6 +296,32 @@
 			)
 			border-box;
 	}
+	.whitish-gradient-border {
+		position: relative;
+		@apply relative p-6 xl:p-7.5 pt-0 rounded-[16px];
+	}
+	.whitish-gradient-border::before {
+		position: absolute;
+		inset: 0;
+		content: "";
+		mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+		-webkit-mask: linear-gradient(#fff 0 0) padding-box,
+			linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+		border-radius: inherit;
+		@apply border-[2px] border-transparent absolute inset-0;
+		content: "";
+		z-index: 1;
+		background: linear-gradient(
+				0,
+				rgba(255, 255, 255, 1) 12.33%,
+				rgba(255, 255, 255, 0.3) 34.31%,
+				rgba(255, 255, 255, 0.3) 52.66%,
+				rgba(255, 255, 255, 1) 74.67%
+			)
+			border-box;
+	}
 }
 
 .linear-shad {
