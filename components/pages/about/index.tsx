@@ -110,10 +110,13 @@ const AboutPageIndex = () => {
 							className: "",
 						},
 					].map((item) => (
-						<div key={item.src} className="col-center gap-8 md:gap-17.75">
+						<div
+							key={item.src}
+							className="col-center gap-8 md:gap-17.75"
+						>
 							<div
 								className={cn(
-									"aspect-square flex-center",
+									"aspect-square flex-center interest-card w-full max-w-[304px] p-5",
 									item.className
 								)}
 							>
@@ -122,7 +125,7 @@ const AboutPageIndex = () => {
 									height={304}
 									src={item.src}
 									alt=""
-									className="object-cover aspect-square"
+									className="object-contain aspect-square"
 								/>
 							</div>
 							<h5 className="text-xl md:text-[2rem] font-medium font-syne leading-[1.05] text-center">
