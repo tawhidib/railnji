@@ -1,4 +1,5 @@
 import { PageSubtitle, PageTitle } from "@/components/common/page-title";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const AboutPageIndex = () => {
@@ -69,7 +70,7 @@ const AboutPageIndex = () => {
 
 								{/* Content */}
 								<div className="w-full col pb-9.5 ps-4 md:ps-8">
-									<h3 className="font-medium text-lg md:text-[1.375rem] leading-[0.9] text-black">
+									<h3 className="font-medium text-lg md:text-[1.75rem] leading-[0.9] text-black">
 										{item.title}
 									</h3>
 
@@ -84,23 +85,38 @@ const AboutPageIndex = () => {
 					</div>
 				</div>
 			</div>
-			<div className="container py-20 md:py-40">
+			<div className="max-w-[1326px] lg:px-4 mx-auto py-20 md:py-40">
 				<Title title="INTERESTS" />
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 					{[
 						{
 							src: "/assets/images/interest1.png",
 							title: "AI Video generating",
+							className: "aspect-350/304",
 						},
 						{
 							src: "/assets/images/interest2.png",
 							title: "Overwatch 2",
+							className: "",
 						},
-						{ src: "/assets/images/interest3.png", title: "Overwatch 2" },
-						{ src: "/assets/images/interest4.png", title: "K-Pop" },
+						{
+							src: "/assets/images/interest3.png",
+							title: "Overwatch 2",
+							className: "",
+						},
+						{
+							src: "/assets/images/interest4.png",
+							title: "K-Pop",
+							className: "",
+						},
 					].map((item) => (
 						<div key={item.src} className="col-center gap-8 md:gap-17.75">
-							<div className="aspect-square flex-center">
+							<div
+								className={cn(
+									"aspect-square flex-center",
+									item.className
+								)}
+							>
 								<Image
 									width={304}
 									height={304}
@@ -124,7 +140,7 @@ export default AboutPageIndex;
 
 const Title = ({ title }: { title: string }) => {
 	return (
-		<h2 className="uppercase text-3xl md:text-6xl text-center mb-14 font-syne">
+		<h2 className="uppercase text-3xl md:text-6xl text-center mb-14 font-syne font-medium leading-[1.4]">
 			{title}
 		</h2>
 	);
