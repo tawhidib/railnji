@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ProjectSection() {
 	return (
-		<div className="relative overflow-hidden" id="filmography">
+		<div className="relative" id="filmography">
 			<div className="col gap-10 md:gap-20.5 container py-15 md:py-30 relative">
 				<SectionNumberTitle number="02/" title="projects" />
 				<div>
@@ -42,7 +42,7 @@ export default function ProjectSection() {
 				alt=""
 				width={1773.9543286995913}
 				height={1736.612043901271}
-				className="absolute top-0 left-[258px] -z-1"
+				className="absolute top-0 right-0 -z-1"
 			/>
 		</div>
 	);
