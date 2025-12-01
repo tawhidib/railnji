@@ -29,13 +29,13 @@ export default function LandingHeroArea() {
 				height={1577.580078125}
 				className="absolute inset-0 -z-10 max-sm:min-h-full max-sm:object-cover"
 			/>
-			{/* <Image
+			<Image
 				src="/assets/images/texture.png"
 				alt=""
 				width={2094}
 				height={1068}
 				className="absolute top-0 left-0 w-full -z-9 max-sm:min-h-full pointer-events-none opacity-15 max-h-[1068px]"
-			/> */}
+			/>
 			<header className="bg-cover relative mb-24 md:mb-[178px]">
 				<div className="col container pt-45 md:pt-58 items-center">
 					<h1 className="text-center font-bold font-syne leading-[0.9] text-black uppercase lg:text-[5rem] text-4xl">
