@@ -33,10 +33,9 @@ export default function LandingHeroArea() {
 					height: "100%",
 					maxHeight: "1068px",
 				}}
-				colors={[0xffe4be, 0xffd4f5, 0xabd6ff, 0xffffff, 0xadebb3]}
-				height={600}
-				amp={200}
-				seed={10}
+				colors={[0xffe4be, 0xabd6ff, 0xffffff, 0xadebb3, 0xffd4f5]}
+				amp={50}
+				seed={5}
 			/>
 			<Image
 				src="/assets/images/texture.png"
