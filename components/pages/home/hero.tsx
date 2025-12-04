@@ -33,7 +33,7 @@ export default function LandingHeroArea() {
 					height: "100%",
 					maxHeight: "1068px",
 				}}
-				colors={[0xffe4be, 0xffe4be, 0xabd6ff, 0xffffff, 0xadebb3]}
+				colors={[0xffe4be, 0xffd4f5, 0xabd6ff, 0xffffff, 0xadebb3]}
 				height={600}
 				amp={200}
 				seed={10}
