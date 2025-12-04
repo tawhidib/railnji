@@ -383,3 +383,16 @@ body {
 	--gradient-color-4: #22c1c3;
 	--gradient-color-5: #fdbb2d;
 }
+.gradient-canvas {
+	opacity: 1 !important; /* Force immediate visibility */
+}
+
+.gradient-canvas.isLoaded {
+	opacity: 1 !important;
+}
+
+/* Optional: Add smooth fade-in for the container */
+.gradient-container {
+	opacity: 1;
+	transition: opacity 0.1s ease;
+}

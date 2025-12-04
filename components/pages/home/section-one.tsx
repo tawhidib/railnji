@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export default function SectionOne() {
 	return (
-		<div id="about" className="w-full max-w-[86.688rem] mx-auto px-6.25">
+		<div
+			id="about"
+			className="w-full max-w-[86.688rem] mx-auto px-6.25 relative z-[3]"
+		>
 			<div className="bg-[#838383] py-14.75 p-5 md:px-17 rounded-[0.938rem] min-h-135 relative overflow-hidden flex">
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-10 w-full">
 					<SectionNumberTitle
