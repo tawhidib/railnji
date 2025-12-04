@@ -1,3 +1,4 @@
+import GradientAnimation from "@/components/GradientAnimation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,19 +23,27 @@ export default function LandingHeroArea() {
 	];
 	return (
 		<>
-			<Image
-				src="/assets/images/landing-header-bg.png"
-				alt=""
-				width={2094}
-				height={1577.580078125}
-				className="absolute inset-0 -z-10 max-sm:min-h-full max-sm:object-cover"
+			<GradientAnimation
+				style={{
+					position: "absolute",
+					top: 0,
+					left: 0,
+					right: 0,
+					bottom: 0,
+					height: "100%",
+					maxHeight: "1068px",
+				}}
+				colors={[0xffe4be, 0xffe4be, 0xabd6ff, 0xffffff, 0xadebb3]}
+				height={600}
+				amp={200}
+				seed={10}
 			/>
 			<Image
 				src="/assets/images/texture.png"
 				alt=""
 				width={2094}
 				height={1068}
-				className="absolute top-0 left-0 w-full -z-9 max-sm:min-h-full pointer-events-none opacity-15 max-h-[1068px]"
+				className="absolute top-0 left-0 w-full max-sm:min-h-full pointer-events-none opacity-15 max-h-[1068px]"
 			/>
 			<header className="bg-cover relative mb-24 md:mb-[178px]">
 				<div className="col container pt-45 md:pt-58 items-center">

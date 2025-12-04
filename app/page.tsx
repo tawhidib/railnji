@@ -10,8 +10,10 @@ export const metadata = {
 export default function Home() {
 	return (
 		<>
-			<LandingHeroArea />
-			<SectionOne />
+			<div className="relative">
+				<LandingHeroArea />
+				<SectionOne />
+			</div>
 			<ProjectSection />
 			<NewsWritingsSection />
 		</>

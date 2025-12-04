@@ -342,3 +342,44 @@ body {
 .font-noken {
 	font-family: "Noken", sans-serif;
 }
+.gradient-container {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.gradient-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: auto;
+}
+
+.gradient-canvas.isLoaded {
+	opacity: 1;
+	transition: opacity 0.5s ease;
+}
+
+.gradient-container.isLoaded .gradient-canvas {
+	opacity: 1;
+}
+
+/* You can define your CSS color variables here */
+:root {
+	--gradient-color-1: #ff0000;
+	--gradient-color-2: #ff0000;
+	--gradient-color-3: #ff00ff;
+	--gradient-color-4: #00ff00;
+	--gradient-color-5: #0000ff;
+}
+
+/* Or override them in your component */
+.custom-gradient {
+	--gradient-color-1: #3a1c71;
+	--gradient-color-2: #d76d77;
+	--gradient-color-3: #ffaf7b;
+	--gradient-color-4: #22c1c3;
+	--gradient-color-5: #fdbb2d;
+}
